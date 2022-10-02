@@ -93,7 +93,7 @@ body{
 .new-price {
     display : inline;
     font-family: "Fraunces";
-    font-size: 2crem;
+    font-size: 2rem;
     padding-right: 0.8rem;
     color :var(--Dark_cyan);
     font-weight: bold;
