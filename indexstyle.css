@@ -14,6 +14,7 @@
 
 body{
     background-color: var(--cream);
+    width : 100vw;
     height : 100vh;
     display : flex;
     justify-content: center;
@@ -23,8 +24,8 @@ body{
 
 .main-section {
     display : flex;
-    width : 80vh;
-    height : 70vh;
+    width : 40%;
+    height : 50%;
     justify-content : center;
     align-items: center;
 }
@@ -32,11 +33,12 @@ body{
 .img-container {
     flex : 2;
     background: url(IMAGES/image-product-desktop.jpg);
-    width: 100%;
-    height : 80%;
+    width: 50%;
+    min-width: 225px;
+    height : 100%;
     background-size: cover;
     background-position: center;
-    padding : 1rem;
+    padding : 2rem;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;    
 }
@@ -44,19 +46,21 @@ body{
 .content-container {
     flex : 2;
     background-color: var(--White);
-    /* padding : 2rem; */
-    width: 100%;
-    height : 80%;
-    padding : 1rem 1rem 1rem 2rem;
+    width: 50%;
+    min-width: 225px;
+    height : 100%;
+    padding : 2rem;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    display: grid;
+    grid-template-columns: 225px;
+    justify-content: space-around;
 }
 
 .content-container h1 {
     font-family: "Fraunces";
     font-weight: 900;
     font-size: 2rem;
-    padding-bottom: 1.5rem;
     text-decoration: double;
     line-height: 1;
 }
@@ -71,7 +75,6 @@ body{
     font-weight: 700;
     letter-spacing: 5px;
     opacity: 0.5;
-    padding-bottom: 1rem;
 }
 
 .content {
@@ -85,23 +88,22 @@ body{
        text-decoration: line-through;
        color : var(--Dark_grayish_blue);
        font-weight: 500;
-       
+
 }
 .new-price {
     display : inline;
     font-family: "Fraunces";
     font-size: 1.5rem;
-    padding-right: 5px;
+    padding-right: 0.8rem;
     color :var(--Dark_cyan);
     font-weight: bold;
 }
 
 .add-cart {
-    margin: 1.75rem 1rem 0rem 0rem;
+    
     font-family: "Montserrat";
     font-weight: 700;  
-    width : 200px;
-    padding : 10px;
+    width : 100%;
     border-radius: 7px;
     border : 2px solid var(--Dark_cyan);
     background-color: var(--Dark_cyan);
@@ -119,49 +121,58 @@ body{
     border : 2px solid hsl(158, 38%, 18%);
 }
 
-@media screen and (max-width:550px) {
+@media screen and (max-width:600px) {
 
     
-
+    body {
+        width : 100vw;
+        height : 100vh;
+    }
     .main-section {
         display : flex;
         flex-direction: column;
-        width : 90vh;
-        height : 90vh;
-        padding: 30px;
+        width : 80%;
+        height : 90%;
     }
 
     .img-container {
-        flex : 1;
+        flex : 2;
+        width : 100%;
+        /* height : 40%; */
+        min-width : 300px;
+        max-width : 400px;
         background: url(IMAGES/image-product-mobile.jpg);
         background-size: cover;
-        background-position: top;
-        padding : 1rem;
+        background-position: center;
         border-top-right-radius: 10px;
         border-bottom-left-radius: 0px;
-        width : 80%
+        padding : 1rem;
+
     }
 
     .content-container {
-        flex : 1.5;
-        padding : 2rem 1rem 1rem 1rem;
-        border-top-right-radius: 0px;
-        border-bottom-left-radius: 10px;  
-        width : 80%;  
-    }
-
-    div *{
-      margin: 0px 1rem;        
-    }
-
-    .new-price {
-        margin-left: 0rem;
-    }
-
-    .add-cart {
+        flex : 3;
         width : 100%;
-        margin: 1.75rem 0rem 1rem;
+        /* height : 60%; */
+        min-width : 300px;
+        max-width : 400px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 10px;   
+        display : grid;
+        grid-template-columns: 300px;
+        /* justify-content: space-evenly; */
+        align-content: space-around;
+        align-items: end;
         padding : 1rem;
+    }
+
+    .content {
+        padding-bottom: 0;
+    }
+    
+    
+    .add-cart {
+        padding : 10px;    
     }
 
 }
